@@ -38,8 +38,6 @@ public:
 	Score();
 	Score(string _Nombre, int _Puntos);
 
-
-
 };
 
 Score* Score::_Scores = NULL;
@@ -56,7 +54,6 @@ Score::Score() {
 Score::Score(string _Nombre, int _Puntos) {
 	setNombre(_Nombre);
 	setPuntos(_Puntos);
-	this->_Puntos = 0;
 	this->Next = NULL;
 	this->First = NULL;
 	this->Last = NULL;
@@ -81,7 +78,7 @@ void Score::IngresarInicio(string _Nombre, int _Valor) {
 
 void Score::IngresarFinal(string _Nombre,int _Punteo) {
 	Score* _nuevo = new Score(_Nombre,_Punteo);
-	if (this->Last == NULL)
+	if (Score::_Scores->Last == NULL)
 	{
 		Score::_Scores->First = _nuevo;
 		Score::_Scores->Last = _nuevo;
@@ -104,11 +101,11 @@ void Score::Agregar_Ordenar(string _Nombre,int _Punteo) {
 	}
 	else
 	{
-		if (this->First->getPuntos() < _Punteo)
+		if (Score::_Scores->First->getPuntos() < _Punteo)
 		{
 			IngresarInicio(_Nombre,_Punteo);
 		}
-		else if (this->Last->getPuntos() > _Punteo)
+		else if (Score::_Scores->Last->getPuntos() > _Punteo)
 		{
 			IngresarFinal(_Nombre,_Punteo);
 		}
@@ -139,7 +136,7 @@ void Score::Imprimir() {
 
 	for (int i = 0; i < this->Contador; i++)
 	{
-		cout << _aux->getNombre() +" "<< _aux->getPuntos() << " -> ";
+		cout << _aux->getNombre() +" "<< to_string(_aux->getPuntos()) << " -> ";
 		_aux = _aux->Next;
 	}
 

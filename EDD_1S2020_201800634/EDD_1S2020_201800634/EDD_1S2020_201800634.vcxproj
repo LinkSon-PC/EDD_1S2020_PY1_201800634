@@ -150,6 +150,7 @@
     <ClCompile Include="EDD_1S2020_201800634.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Diccionario.h" />
     <ClInclude Include="Ficha.h" />
     <ClInclude Include="Punteo.h" />
     <ClInclude Include="Score.h" />

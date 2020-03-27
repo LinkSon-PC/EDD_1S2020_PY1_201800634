@@ -35,5 +35,8 @@
     <ClInclude Include="Score.h">
       <Filter>Archivos de encabezado\SCRABBLE</Filter>
     </ClInclude>
+    <ClInclude Include="Diccionario.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

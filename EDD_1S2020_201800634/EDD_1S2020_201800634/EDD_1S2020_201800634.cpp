@@ -7,6 +7,7 @@
 #include "Punteo.h"
 #include "Usuario.h"
 #include "Score.h"
+#include "Diccionario.h"
 
 using namespace std;
 
@@ -42,7 +43,7 @@ int main()
 	cout << strcmp(n1.c_str(), n2.c_str());*/
 	//cout << strcmpi(n1.c_str, n2.c_str);
 
-	Usuario user;
+	/*Usuario user;
 	user.AgregarUsurio("f");
 	user.AgregarUsurio("c");
 	user.AgregarUsurio("d");
@@ -78,9 +79,15 @@ int main()
 	user.AgregarScore("z", 45);
 	user.Imprimir();
 
-	score.Imprimir();
+	score.Imprimir();*/
 
-
+	Diccionario dic;
+	dic.Agregar("palabra");
+	dic.Agregar("hola");
+	dic.Agregar("mundo");
+	dic.Agregar("que");
+	dic.Agregar("tal");
+	dic.Impimir();
 }
 
 // Ejecutar programa: Ctrl + F5 o menú Depurar > Iniciar sin depurar
